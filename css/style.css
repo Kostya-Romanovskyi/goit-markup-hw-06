@@ -9,6 +9,8 @@
   --icon-color: #afb1b8;
   --social-links-rgba-10: rgba(255, 255, 255, 0.1);
   --bg-work-cards: rgba(47, 48, 58, 0.8);
+  --modal-border-color: rgba(33, 33, 33, 0.2);
+  --text-area-color: rgba(117, 117, 117, 0.5);
 
   /* background color */
   --bg-dark: #2f303a;
@@ -22,7 +24,7 @@
   --secondary-font: 'Raleway', sans-serif;
 
   /* other */
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   color: var(--main-color);
@@ -120,7 +122,7 @@ img {
 
   text-decoration: none;
 
-  transition: color 250ms var(--timing-function);
+  transition: color var(--timing-function);
 }
 .link-padding {
   padding: 32px 0;
@@ -167,7 +169,7 @@ img {
 
   text-decoration: none;
 
-  transition: color 250ms var(--timing-function);
+  transition: color var(--timing-function);
 }
 .auth-link:hover,
 .auth-link:focus {
@@ -180,7 +182,7 @@ img {
   margin-right: 10px;
 
   fill: var(--secondary-color);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--timing-function);
 }
 
 .auth-link:hover .auth-icon {
@@ -244,7 +246,7 @@ img {
   background-color: var(--bg-modal);
 
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity var(--timing-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -268,7 +270,7 @@ img {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 }
 .modal-btn {
   position: absolute;
@@ -282,13 +284,137 @@ img {
   border-radius: 50%;
 }
 .modal-cross {
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--timing-function);
 }
 .modal-btn:hover .modal-cross {
   fill: var(--active-color);
 }
-.form-modal {
+.modal-wrap {
 }
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  padding-top: 40px;
+  margin-bottom: 12px;
+
+  color: var(--main-color);
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+.form-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-color);
+}
+.form-input {
+  width: 448px;
+  height: 40px;
+
+  padding-left: 42px;
+
+  border: none;
+  outline: 1px solid var(--modal-border-color);
+  border-radius: 4px;
+
+  transition: outline var(--timing-function);
+}
+.form-svg {
+  position: absolute;
+  top: 54%;
+  left: 15px;
+
+  transition: fill var(--timing-function);
+}
+.form-input:focus {
+  outline: 1px solid var(--active-color);
+}
+.form-input:focus ~ .form-svg {
+  fill: var(--active-color);
+}
+.form-area {
+  width: 448px;
+  height: 120px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  padding-top: 12px;
+  padding-left: 16px;
+
+  color: var(--text-area-color);
+
+  border: 1px solid var(--modal-border-color);
+  border-radius: 4px;
+
+  resize: none;
+  transition: outline var(--timing-function);
+}
+.form-area:focus {
+  outline: 1px solid var(--active-color);
+}
+.field-margin {
+  margin-bottom: 20px;
+}
+.shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.block {
+  display: block;
+  margin-bottom: 30px;
+}
+.form-check {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-color);
+}
+.form-link {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+
+  letter-spacing: 0.03em;
+
+  color: var(--active-color);
+}
+/* .form-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--active-color);
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+} */
 
 /* СИЛЬНІ СТОРОНИ */
 
@@ -470,7 +596,7 @@ img {
   border-radius: 50%;
 
   color: var(--white-color);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .team-icons-link:hover,
 .team-icons-link:focus {
@@ -488,7 +614,7 @@ img {
 
   fill: var(--icon-color);
 
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--timing-function);
 }
 
 /* Постійні клієнти */
@@ -504,7 +630,7 @@ img {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 
-  transition: border 250ms var(--timing-function);
+  transition: border var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -512,7 +638,7 @@ img {
   fill: var(--active-color);
 }
 .clients-icon {
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--timing-function);
 }
 /* FOOTER */
 
@@ -581,7 +707,7 @@ img {
   color: var(--white-color);
   background-color: var(--social-links-rgba-10);
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--timing-function);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -684,8 +810,8 @@ img {
 
   cursor: pointer;
 
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
-    box-shadow 250ms var(--timing-function);
+  transition: background-color var(--timing-function), color var(--timing-function),
+    box-shadow var(--timing-function);
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -704,7 +830,7 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow var(--timing-function);
 }
 .projects-item:hover,
 .projects-item:focus {
@@ -747,7 +873,7 @@ img {
   background-color: var(--backdrop-card-color);
 
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 }
 .projects-item:hover .projects-img-wrap::after {
   transform: translateY(0);
@@ -767,7 +893,7 @@ img {
   color: var(--white-color);
 
   transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 
   z-index: 10;
 }
