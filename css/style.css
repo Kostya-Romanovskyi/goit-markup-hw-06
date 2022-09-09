@@ -369,7 +369,8 @@ img {
 
   color: var(--text-area-color);
 
-  border: 1px solid var(--modal-border-color);
+  outline: 1px solid var(--modal-border-color);
+  border: none;
   border-radius: 4px;
 
   resize: none;
