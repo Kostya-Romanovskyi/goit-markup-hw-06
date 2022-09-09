@@ -314,7 +314,7 @@ img {
       <!-- ВАРІАНТ 1 -->
 <!-- ======================= --> */
 
-.form-field {
+/* .form-field {
   position: relative;
 
   display: flex;
@@ -397,6 +397,22 @@ img {
 
   color: var(--secondary-color);
 }
+.checked-icon {
+  display: inline-flex;
+
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+}
+.form-check:checked + .checked-icon {
+  background-color: var(--active-color);
+  background-image: url('../icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--active-color);
+}
 .form-link {
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -404,17 +420,13 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--active-color);
-}
-.ssvvgg {
-  fill: #2196f3;
-  stroke: white;
-}
+} */
 
 /* <!-- =======================  -->
     <!-- ВАРІАНТ 2 -->
 <!-- ======================= --> */
 
-/* .form-field {
+.form-field {
   position: relative;
   display: block;
   margin-bottom: 28px;
@@ -474,7 +486,7 @@ img {
 
   resize: none;
 
-  transition: outline var(--active-color);
+  transition: outline var(--timing-function);
 }
 .textarea:focus {
   outline: 1px solid var(--active-color);
@@ -482,10 +494,33 @@ img {
 .textarea-margin {
   margin-bottom: 20px;
 }
-
 .form-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.check-margin {
+.form-check:checked + .check-icon {
+  background-color: var(--active-color);
+
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+.check-icon {
+  display: inline-block;
+
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+
+  margin-right: 7px;
+}
+.check-label {
+  display: inline-flex;
+  align-items: center;
+
   margin-bottom: 30px;
 }
 .form-check-text {
@@ -506,8 +541,7 @@ img {
 }
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-} 
-*/
+}
 
 /* СИЛЬНІ СТОРОНИ */
 
