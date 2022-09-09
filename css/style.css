@@ -314,7 +314,7 @@ img {
       <!-- ВАРІАНТ 1 -->
 <!-- ======================= --> */
 
-/* .form-field {
+.form-field {
   position: relative;
 
   display: flex;
@@ -345,7 +345,7 @@ img {
 }
 .form-svg {
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 15px;
 
   transition: fill var(--timing-function);
@@ -389,7 +389,14 @@ img {
   display: block;
   margin-bottom: 30px;
 }
+.label-pointer {
+  cursor: pointer;
+}
 .form-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   font-size: 14px;
   line-height: calc(24 / 14);
 
@@ -408,10 +415,22 @@ img {
 }
 .form-check:checked + .checked-icon {
   background-color: var(--active-color);
-  background-image: url('../icon-check.svg');
-  background-size: contain;
-  background-origin: border-box;
   border-color: var(--active-color);
+}
+.check-svg {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+
+  border-radius: 4px;
+  fill: transparent;
+
+  transition: fill var(--timing-function), background-color var(--timing-function);
+}
+
+.form-check:checked ~ .check-svg {
+  fill: white;
+  background-color: var(--active-color);
 }
 .form-link {
   font-size: 14px;
@@ -420,13 +439,13 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--active-color);
-} */
+}
 
 /* <!-- =======================  -->
     <!-- ВАРІАНТ 2 -->
 <!-- ======================= --> */
 
-.form-field {
+/* .form-field {
   position: relative;
   display: block;
   margin-bottom: 28px;
@@ -462,7 +481,7 @@ img {
 }
 .form-svg {
   position: absolute;
-  top: 14px;
+  top: 11px;
   left: 15px;
   transition: fill var(--timing-function);
 }
@@ -499,13 +518,6 @@ img {
   -moz-appearance: none;
   appearance: none;
 }
-.form-check:checked + .check-icon {
-  background-color: var(--active-color);
-
-  background-image: url('../images/icon-check.svg');
-  background-size: contain;
-  background-origin: border-box;
-}
 .check-icon {
   display: inline-block;
 
@@ -516,6 +528,20 @@ img {
   border-radius: 2px;
 
   margin-right: 7px;
+}
+.check-svg {
+  display: inline-block;
+
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+
+  margin-right: 7px;
+  fill: white;
+  transition: border var(--timing-function), background-color var(--timing-function);
+}
+.form-check:checked + .check-svg {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
 }
 .check-label {
   display: inline-flex;
@@ -541,7 +567,7 @@ img {
 }
 .shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+} */
 
 /* СИЛЬНІ СТОРОНИ */
 
