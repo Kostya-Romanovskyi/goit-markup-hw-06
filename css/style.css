@@ -351,11 +351,15 @@ img {
 
   transition: fill var(--timing-function);
 }
-.form-input:focus,
+.form-input:focus {
+  outline: 1px solid var(--active-color);
+}
 .form-input:hover {
   outline: 1px solid var(--active-color);
 }
-.form-input:focus,
+.form-input:focus ~ .form-svg {
+  fill: var(--active-color);
+}
 .form-input:hover ~ .form-svg {
   fill: var(--active-color);
 }
