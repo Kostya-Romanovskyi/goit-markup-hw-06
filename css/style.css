@@ -290,8 +290,10 @@ img {
   fill: var(--active-color);
 }
 .modal-wrap {
+  padding: 40px;
 }
 .modal-title {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -299,7 +301,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  padding-top: 40px;
   margin-bottom: 30px;
 
   color: var(--main-color);
@@ -350,10 +351,12 @@ img {
 
   transition: fill var(--timing-function);
 }
-.form-input:focus {
+.form-input:focus,
+.form-input:hover {
   outline: 1px solid var(--active-color);
 }
-.form-input:focus ~ .form-svg {
+.form-input:focus,
+.form-input:hover ~ .form-svg {
   fill: var(--active-color);
 }
 .form-area {
@@ -376,7 +379,8 @@ img {
   resize: none;
   transition: outline var(--timing-function);
 }
-.form-area:focus {
+.form-area:focus,
+.form-area:hover {
   outline: 1px solid var(--active-color);
 }
 .field-margin {
@@ -384,7 +388,6 @@ img {
 }
 .shadow {
   transition: box-shadow var(--timing-function);
-  margin-bottom: 40px;
 }
 .shadow:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
